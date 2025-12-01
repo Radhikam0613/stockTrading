@@ -1,16 +1,17 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
-const app = express();
 require('dotenv').config();
 const cookieParser = require("cookie-parser");
-const authRoute = require('./routes/AuthRoute');
 const bodyParser = require('body-parser');
+
+const authRoute = require('./routes/AuthRoute');
 
 const {HoldingsModel} = require('./model/HoldingsModel');
 const {PositionsModel} = require('./model/PositionsModel');
 const {OrdersModel} = require('./model/OrdersModel');
 
+const app = express();
 
 const PORT = process.env.PORT || 3002;
 const uri = process.env.MONGO_URL;
@@ -28,13 +29,14 @@ app.use(cors({
     methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true,
-  }));
-app.use(bodyParser.json());
-app.use(express.json());
-app.use(cookieParser());
-app.use("/",authRoute);
-app.use(express.urlencoded({ extended: true }));
+}));
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(cookieParser());
+app.use(bodyParser.json());
+
+app.use("/api/auth",authRoute);
 
 app.get('/allHoldings', async(req,res) => {
       let allHoldings = await HoldingsModel.find({});

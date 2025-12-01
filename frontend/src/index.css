@@ -38,3 +38,17 @@ code {
   border-radius: 10px;
   border: none;
 }
+
+.custom {
+  text-decoration: none;
+}
+
+.footerEnd ul li {
+  text-align: center;
+    display:inline;
+    margin-right: 14px;
+    text-decoration: none;
+    position: relative;
+    left:120px;
+    font-size: small;
+}

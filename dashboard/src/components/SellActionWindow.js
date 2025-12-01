@@ -1,64 +1,59 @@
-import React, { useState ,useContext}  from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
-
-import axios from "axios"
+import axios from "axios";
 
 import GeneralContext from "./GeneralContext";
-// import  FlashMessageContext  from "./FlashMeassegeContext";
-import "./BuyActionWindow.css";
+import "./BuyActionWindow.css"; // same styling
 
-const SellActionWindow = ({ uid }) => {
- 
-  const [stockQuantity,setStockQuantity] = useState(0);
-  const [stockPrice,setStockPrice] = useState(0.0);
- 
-  const generalContext= useContext(GeneralContext);
-  const handleSellClick = async()=>{
-    try {
-     const response=await axios.post("https://stockTrading-backend.onrender.com/newOrder",{
-        name: uid,
-    qty:stockQuantity,
-    price: stockPrice,
-    mode: "SELL",
-      },
-      { withCredentials: true }
-    );
-    
-  
-      console.log('Order sell successfully:', response.data);
-    } catch (error) {
-      console.error('Error placing order:', error.response?.data || error.message);
-      
+const SellActionWindow = ({ uid, userHoldings = [] }) => {
+  const [stockQuantity, setStockQuantity] = useState(1);
+  const [stockPrice, setStockPrice] = useState(0.0);
+
+  // FIX: useContext (BuyActionWindow is wrong but works accidentally)
+  const { closeSellWindow } = useContext(GeneralContext);
+
+  // Find how many stocks user owns for this UID
+  const userOwnedQty =
+    userHoldings.find((item) => item.name === uid)?.qty || 0;
+
+  const handleSellClick = () => {
+    // ❗Check if user is allowed to sell
+    if (userOwnedQty === 0) {
+      alert("You do not own this stock. Sell is not allowed.");
+      return;
     }
-  
-     generalContext.closeSellWindow();
-  };
-  const handleCancelClick = ()=>{
-    generalContext.closeSellWindow();
-  };
 
-  
+    if (stockQuantity > userOwnedQty) {
+      alert(`You only own ${userOwnedQty} units. Cannot sell more.`);
+      return;
+    }
 
- 
+    axios.post("http://localhost:3002/newOrder", {
+      name: uid,
+      qty: stockQuantity,
+      price: stockPrice,
+      mode: "SELL",
+    });
+
+    closeSellWindow();
+  };
 
   return (
-    
-    <div className="container" id="buy-window" draggable="true">
-     
+    <div className="container" id="buy-window">
       <div className="regular-order">
         <div className="inputs">
-          <h1>{uid}</h1>
           <fieldset>
             <legend>Qty.</legend>
             <input
               type="number"
               name="qty"
               id="qty"
-              onChange={(e)=>setStockQuantity(e.target.value)}
+              onChange={(e) => setStockQuantity(e.target.value)}
               value={stockQuantity}
-              
+              min="1"
             />
           </fieldset>
+
           <fieldset>
             <legend>Price</legend>
             <input
@@ -66,7 +61,7 @@ const SellActionWindow = ({ uid }) => {
               name="price"
               id="price"
               step="0.05"
-              onChange={(e)=>setStockPrice(e.target.value)}
+              onChange={(e) => setStockPrice(e.target.value)}
               value={stockPrice}
             />
           </fieldset>
@@ -74,12 +69,14 @@ const SellActionWindow = ({ uid }) => {
       </div>
 
       <div className="buttons">
-        <span>Margin required ₹140.65</span>
+        <span>
+          You own: {userOwnedQty} units
+        </span>
         <div>
-          <Link className="btn btn-blue sellAction" onClick={handleSellClick} >
-          Sell
+          <Link className="btn btn-blue" onClick={handleSellClick}>
+            Sell
           </Link>
-          <Link to="" className="btn btn-grey" onClick={handleCancelClick}>
+          <Link className="btn btn-grey" onClick={closeSellWindow}>
             Cancel
           </Link>
         </div>

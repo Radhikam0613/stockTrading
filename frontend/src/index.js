@@ -4,6 +4,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import './index.css';
 import Homepg from './landing-page/home/Homepg';
 import Signup from './landing-page/signup/Signup';
+import Login from './landing-page/login/Login';
 import Aboutpg from './landing-page/about/Aboutpg';
 import Productpg from './landing-page/products/Productpg';
 import Pricingpg from './landing-page/pricing/Pricingpg';
@@ -18,6 +19,7 @@ root.render(
     <Routes>
       <Route path='/' element={<Homepg/>}/>
       <Route path='/signup' element={<Signup/>}/>
+      <Route path='/login' element={<Login/>}/>
       <Route path='/about' element={<Aboutpg/>}/>
       <Route path='/product' element={<Productpg/>}/>
       <Route path='/pricing' element={<Pricingpg/>}/>
