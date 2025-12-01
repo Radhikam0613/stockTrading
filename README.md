@@ -1,6 +1,6 @@
 # 📈Full-Stack Stock Trading Platform
 
-A **full-stack stock trading platform ** simulating Zerodha, built with **React.js frontend** and **Node.js + Express backend**, featuring **JWT authentication**, **portfolio management**, **charts**, and **secure RESTful APIs**. Perfect for showcasing **full-stack development skills** for internships.  
+A **full-stack stock trading platform** simulating Zerodha, built with **React.js frontend** and **Node.js + Express backend**, featuring **JWT authentication**, **portfolio management**, **charts**, and **secure RESTful APIs**. Perfect for showcasing **full-stack development skills** for internships.  
 
 ---
 
@@ -20,7 +20,7 @@ A **full-stack stock trading platform ** simulating Zerodha, built with **React.
 
 ## 📝 About This Project
 
-A **full-stack Zerodha ** built with **React.js (Landing + Dashboard)** and **Node.js + Express backend**. Features **secure JWT authentication**, password hashing, **interactive portfolio charts**, buy/sell orders, and **RESTful API integration with MongoDB**. Demonstrates **end-to-end full-stack development, problem-solving, and software engineering skills**—ideal for internship portfolios.  
+A **full-stack Zerodha** built with **React.js (Landing + Dashboard)** and **Node.js + Express backend**. Features **secure JWT authentication**, password hashing, **interactive portfolio charts**, buy/sell orders, and **RESTful API integration with MongoDB**. Demonstrates **end-to-end full-stack development, problem-solving, and software engineering skills**—ideal for internship portfolios.  
 
 ---
 
