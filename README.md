@@ -26,17 +26,17 @@ A **full-stack Zerodha clone** built with **React.js (Landing + Dashboard)** and
 
 ## 📂 Table of Contents
 
-1. [Project Overview](#-project-overview)  
-2. [Key Features](#-key-features)  
-3. [Tech Stack](#-tech-stack)  
-4. [Frontend Structure](#-frontend-structure)  
-5. [Backend Structure](#-backend-structure)  
-6. [Authentication & Security](#-authentication--security)  
-7. [Charts & Visualizations](#-charts--visualizations)  
-8. [Testing](#-testing)  
-9. [Setup & Installation](#-setup--installation)  
-10. [Next Steps / Enhancements](#-next-steps--enhancements)  
-11. [Skills Demonstrated](#-skills-demonstrated)  
+1. [Project Overview](#project-overview)  
+2. [Key Features](#key-features)  
+3. [Tech Stack](#tech-stack)  
+4. [Frontend Structure](#frontend-structure)  
+5. [Backend Structure](#backend-structure)  
+6. [Authentication & Security](#authentication--security)  
+7. [Charts & Visualizations](#charts--visualizations)  
+8. [Testing](#testing)  
+9. [Setup & Installation](#setup--and-installation)  
+10. [Next Steps / Enhancements](#next-steps--enhancements)  
+11. [Skills Demonstrated](#skills-demonstrated)
 
 ---
 
@@ -69,6 +69,13 @@ A **full-stack Zerodha clone** built with **React.js (Landing + Dashboard)** and
 | **Backend** | Node.js, Express, bcryptjs, jsonwebtoken, cookie-parser, MongoDB, Mongoose |
 | **Testing** | Jest, ThunderClient |
 | **Version Control** | Git, GitHub |
+
+---
+![React](https://img.shields.io/badge/React-18.2.0-blue?logo=react)
+![Node.js](https://img.shields.io/badge/Node.js-18-green?logo=node.js)
+![MongoDB](https://img.shields.io/badge/MongoDB-6.0-green?logo=mongodb)
+![JWT](https://img.shields.io/badge/JWT-auth-orange)
+![Jest](https://img.shields.io/badge/Jest-testing-red?logo=jest)
 
 ---
 
@@ -121,12 +128,3 @@ A **full-stack Zerodha clone** built with **React.js (Landing + Dashboard)** and
 - Ensures secure, bug-free, maintainable code  
 
 ---
-
-
-
-# Run React apps
-cd ../landing-app
-npm start
-
-cd ../kite-dashboard
-npm start
