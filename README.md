@@ -26,17 +26,16 @@ A **full-stack Zerodha clone** built with **React.js (Landing + Dashboard)** and
 
 ## 📂 Table of Contents
 
-1. [Project Overview](#project-overview)  
-2. [Key Features](#key-features)  
+1. [Project Overview](#-project-overview)  
+2. [Key Features](#-key-features)  
 3. [Tech Stack](#tech-stack)  
 4. [Frontend Structure](#frontend-structure)  
 5. [Backend Structure](#backend-structure)  
-6. [Authentication & Security](#authentication--security)  
-7. [Charts & Visualizations](#charts--visualizations)  
-8. [Testing](#testing)  
-9. [Setup & Installation](#setup--and-installation)  
-10. [Next Steps / Enhancements](#next-steps--enhancements)  
-11. [Skills Demonstrated](#skills-demonstrated)
+6. [Authentication & Security](#-authentication--security)  
+7. [Charts & Visualizations](#-charts--visualizations)  
+8. [Testing](#-testing)  
+10. [Next Steps / Enhancements](#-next-steps--enhancements)  
+11. [Skills Demonstrated](#-skills-demonstrated)  
 
 ---
 
@@ -61,7 +60,7 @@ A **full-stack Zerodha clone** built with **React.js (Landing + Dashboard)** and
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Layer | Technologies |
 |-------|--------------|
@@ -71,15 +70,8 @@ A **full-stack Zerodha clone** built with **React.js (Landing + Dashboard)** and
 | **Version Control** | Git, GitHub |
 
 ---
-![React](https://img.shields.io/badge/React-18.2.0-blue?logo=react)
-![Node.js](https://img.shields.io/badge/Node.js-18-green?logo=node.js)
-![MongoDB](https://img.shields.io/badge/MongoDB-6.0-green?logo=mongodb)
-![JWT](https://img.shields.io/badge/JWT-auth-orange)
-![Jest](https://img.shields.io/badge/Jest-testing-red?logo=jest)
 
----
-
-## 🖥️ Frontend Structure
+## Frontend Structure
 
 **Landing App:**  
 - Pages: **Signup, Login**  
@@ -91,7 +83,7 @@ A **full-stack Zerodha clone** built with **React.js (Landing + Dashboard)** and
 
 ---
 
-## 🗄️ Backend Structure
+## Backend Structure
 
 - **Routes:**  
   - `/signup` → Create **user**  
@@ -128,3 +120,34 @@ A **full-stack Zerodha clone** built with **React.js (Landing + Dashboard)** and
 - Ensures secure, bug-free, maintainable code  
 
 ---
+## ✨ Next Steps / Enhancements
+
+- Integrate live stock market API
+
+- Implement WebSockets for real-time dashboard updates
+
+- Enhance UI/UX for mobile responsiveness
+
+- Add more analytics charts
+
+- Improve error handling for invalid/expired JWTs
+
+---
+
+## 💡 Skills Demonstrated
+
+- Core Programming Fundamentals: Data types, loops, conditions, functions, OOP basics, debugging
+
+- Frontend Development: HTML5, CSS3, JS (ES6+), React.js, responsive design, REST API consumption
+
+- Backend Development: Node.js + Express, REST APIs, JWT authentication, error handling
+
+- Database Skills: MongoDB CRUD operations, Mongoose ORM, data modeling
+
+- Version Control: Git/GitHub, branching, commits
+
+- Tools & Deployment: ThunderClient, Jest, basic deployment knowledge
+
+- Problem-Solving & SDLC: Requirement analysis → design → development → testing
+
+- Soft Skills: Quick learning, teamwork, communication, discipline, ownership, time management
